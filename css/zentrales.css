@@ -2,6 +2,7 @@
 Zentrales Stylesheet
 --------------------------------------------------------*/
 
+@import url('landing-page-slider.css');
 @import url('normalize.scss');
 @import url('accessibility.css');
 @import url('typhography.css');
@@ -17,4 +18,4 @@ Zentrales Stylesheet
 @import url("work.css");
 @import url("table.css");
 @import url("contact.css");
-@import url("slideshow.css");
+@import url("burger.css");

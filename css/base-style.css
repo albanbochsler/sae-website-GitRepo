@@ -1,6 +1,61 @@
 /*--------------------------------------
-Base-Styles
+Base-Styles - Last Edit 14.08.2017
 --------------------------------------*/
+
+body {
+	display: block;
+	margin: 0;
+}
+
+
+/* fade animation */
+
+fade {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.moveleft, .moveright, .moveup, .fadescroll, .movedown {
+	-webkit-transition: all 400ms;
+	transition: all 400ms;
+	opacity: 0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+.left {
+	-webkit-transform: translate(200px, 0);
+	        transform: translate(200px, 0);
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.right {
+	-webkit-transform: translate(-200px, 0);
+	        transform: translate(-200px, 0);
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.up {
+	-webkit-transform: translate(0, 200px);
+	        transform: translate(0, 200px);
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.down {
+	-webkit-transform: translate(0, -200px);
+	        transform: translate(0, -200px);
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+
+/* fade animation END */
+
+.visibility {
+	display: none;
+}
 
 .centered {
 	margin: 0 auto;
@@ -8,27 +63,6 @@ Base-Styles
 	0 1em;
 	margin-right: 20px;
 	margin-left: 20px;
-}
-
-.btn {
-	padding: 6px 30px;
-	align-self: center;
-	background-color: #000;
-	border: 3px solid black;
-	text-align: center;
-	position: relative;
-	transition: .6s;
-	color: #fff;
-	height: auto!important;
-}
-
-.btn:hover {
-	background-color: #fff;
-	color: #000;
-}
-
-.btn:hover a {
-	color: #fff;
 }
 
 figure {
@@ -40,4 +74,8 @@ img {
 	border: 0;
 	max-width: 100%;
 	height: auto;
+}
+
+@media screen and (max-width: 480px) {
+
 }

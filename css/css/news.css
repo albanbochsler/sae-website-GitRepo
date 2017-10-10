@@ -1,0 +1,200 @@
+/*--------------------------------
+News Section - Aktuelles
+--------------------------------*/
+
+
+/* Button - Last Edit 08.08.2017 */
+
+.more-btn {
+	margin-top: 20px;
+	background: #59aecb;
+
+	border: none;
+	position: relative;
+	height: 50px;
+
+	padding: 0 2em;
+	cursor: pointer;
+	transition: 800ms ease all;
+	outline: none;
+}
+
+.more-btn a{
+font-size: 18px;
+	font-family: 'Lato', sans-serif;
+	letter-spacing: 2px;
+	font-weight: 500;
+	color: #fff;
+}
+
+.more-btn:hover{
+	background: #fff;
+}
+
+.more-btn:hover > a{
+	color: #59aecb;
+}
+
+.more-btn:before,
+.more-btn:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 2px;
+	width: 0;
+	background: #59aecb;
+	transition: 400ms ease all;
+}
+
+.more-btn:after {
+	right: inherit;
+	top: inherit;
+	left: 0;
+	bottom: 0;
+}
+
+.more-btn:hover:before,
+button:hover:after {
+	width: 100%;
+	transition: 800ms ease all;
+}
+
+@media screen and (max-width: 480px) {
+	.more-btn {
+		width: 100%;
+	}
+}
+
+
+/* Base Style */
+
+.card-content h2 {
+	margin: 0;
+
+}
+
+
+
+.card:nth-child(odd) .card-content {
+	padding: 40px;
+	-webkit-box-flex: 0;
+	-ms-flex: 0 1 45%;
+	flex: 0 1 45%;
+	align-content: flex-end;
+}
+
+.card:nth-child(even) .card-content {
+	padding: 40px;
+	-webkit-box-flex: 0;
+	-ms-flex: 0 1 45%;
+	flex: 0 1 45%;
+}
+
+h1.title {
+	max-width: 1400px;
+	margin: 0 auto;
+	margin-top: 80px;
+	margin-bottom: 60px;
+}
+
+
+/* Flexbox */
+
+.cards {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.card {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin-bottom: 80px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.1s;
+}
+
+.card:hover {
+	box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card:nth-child(odd) {
+	position: relative;
+	-webkit-box-pack: row;
+	-ms-flex-pack: row;
+	justify-content: row;
+	left: -200px;
+}
+
+.card:nth-child(even) {
+	position: relative;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	-ms-flex-direction: row-reverse;
+	flex-direction: row-reverse;
+	left: 200px;
+}
+
+
+/* Responsiv */
+
+@media screen and (max-width: 898px) {
+	.cards {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	.card {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		margin-bottom: 80px;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+	.card:nth-child(odd) .card-content {
+		margin-left: 0;
+		margin-top: 30px;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+	.card:nth-child(even) .card-content {
+		margin-right: 0;
+		margin-top: 30px;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+	/* Bugfix */
+	.card:nth-child(even) {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+	.centered {
+		background-color: white;
+	}
+	.btn {
+		width: 100px;
+	}
+}

@@ -3,6 +3,7 @@ Fluides Grid (Kacheln) - Arbeiten
 --------------------------------------------------------*/
 
 .flex-container {
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	height: auto;
@@ -19,8 +20,7 @@ Fluides Grid (Kacheln) - Arbeiten
 	display: -ms-flexbox;
 	display: flex;
 	margin-left: 37px;
-	margin-top: 25px;
-	margin-bottom: 10px;
+	margin-top: 200px;
 	-webkit-box-pack: start;
 	-ms-flex-pack: start;
 	justify-content: flex-start;
@@ -160,3 +160,46 @@ Fluides Grid (Kacheln) - Arbeiten
 		padding-left: 0!important;
 	}
 }
+
+/******************** Lightbox ***********************/
+
+#lightbox-overlay {
+	position: absolute;
+	z-index: 10000;
+	width: 100%;
+	min-height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.9);
+	display: none;
+}
+
+#lightbox-overlay #lightbox-content {
+	width: 80%;
+	position: absolute;
+	top: 5%;
+	left: 10%;
+	right: 10%;
+}
+
+#lightbox-overlay #lightbox-content img{
+	width: 100%;
+	height: auto;
+}
+
+#lightbox-overlay #lightbox-content #lightbox-nav{
+
+	margin: 0 0 20px 0;
+	width: 100%;
+	text-align: left;
+}
+
+#lightbox-overlay #lightbox-content #lightbox-nav .fa{
+	color: #fff;
+	font-size: 30px;
+
+}
+
+#lightbox-overlay #lightbox-content #lightbox-nav .fa {cursor: pointer;}

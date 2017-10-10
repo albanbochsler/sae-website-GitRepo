@@ -1,3 +1,5 @@
+<!-- HTML Seite: Arbeiten - Last Edit 08.08.2017-->
+
 <html lang="de">
 
 <head>
@@ -8,8 +10,10 @@
 	<link rel="stylesheet" href="../css/zentrales.css" type="text/css" media="all">
 	<link rel="shortcut icon" type="image/x-icon" href="../icons/fav.ico">
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDQnrAQzneJc7RsZ2cUs33vMsyqHEMtlA"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
@@ -19,27 +23,51 @@
 
 <body> <a class="skip-link screen-reader-text" href="#content">Zum Inhalt springen</a>
 	<main class="main-area" id="content">
-		<div class="pagehead">
-			<div class="logo"> </div>
-		</div>
-	<section class="menu-section">
-				<nav id="multi-level-nav" class="multi-level-nav menu" role="navigation">
-					<ul>
-						<li><a href="../index.html">Startseite</a></li>
-						<li class="has-children"> <a href="arbeiten.html">Arbeiten<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Untermenü öffnen</span></button></a>
-							<ul class="sub-menu">
-								<li><a href="arbeiten.html">Metallbau</a></li>
-								<li><a href="arbeiten.html">Stahlbau</a></li>
-							</ul>
-						</li>
-						<li><a href="kontakt.html">Kontakt</a></li>
-						<li><a href="kontakt.html">Login</a></li>
+		<header class="head-transition">
+		<nav class="pagehead">
+			<ul class="global-nav">
+				<li><a class="login-nav">Login</a></li>
+				<li><a class="subscribe-nav">Subscribe</a></li>
 
+			</ul>
+			</nav>
 
+		<section class="menu-section">
+			<nav id="multi-level-nav" class="multi-level-nav menu" role="navigation">
+				<div class="logo-text">
+					<h6>Bochsler<br> Buildings</h6></div>
+				<div id="preloader-container">
+					<svg id="nine" width="124" height="118" viewBox="0 0 124 118" overflow="visible">
+						<rect x="10" y="10" width="30" height="30" class="squares" />
+						<rect x="50" y="10" width="30" height="30" class="squares" />
+						<rect x="90" y="10" width="30" height="30" class="squares" />
+						<rect x="10" y="50" width="30" height="30" class="squares" />
+						<rect x="50" y="50" width="30" height="30" class="squares" />
+						<rect x="90" y="50" width="30" height="30" class="squares" />
+						<rect x="10" y="90" width="30" height="30" class="squares" />
+						<rect x="50" y="90" width="30" height="30" class="squares" />
+						<rect x="90" y="90" width="30" height="30" class="squares" /> </svg>
+				</div>
+				<ul class="navi-menu">
+					<li><a href="../index.html">Startseite</a></li>
+					<li> <a href="arbeiten.html">Arbeiten</a> </li>
+					<li><a href="kontakt.html">Kontakt</a></li>
+				</ul>
+
+			</nav>
+		</section>
+
+		</header>
+			<div class="button_container" id="toggle"> <span class="top"></span> <span class="middle"></span> <span class="bottom"></span> </div>
+				<div class="overlay" id="overlay">
+					<nav class="overlay-menu">
+						<ul>
+							<li><a href="../index.html">Startseite</a></li>
+							<li><a href="arbeiten.html">Arbeiten</a> </li>
+							<li><a href="kontakt.html">Kontakt</a></li>
 						</ul>
-				</nav>
-			</section>
-
+					</nav>
+				</div>
 		<ul class="filter">
 			<li class="filter-all"><a href="#"><span class="fa fa-angle-right"></span>Alle</a></li>
 			<li class="filter-metallbau"><a href="#"><span class="fa fa-angle-right"></span>Metallbau</a></li>
@@ -126,10 +154,11 @@
 						<input type="hidden" name="nl2go--key" id="nl2go--key" value="c733d7970f33e812dc784163671541b88448df6e9cb97570e0a5dba2201afaf4$13156">
 						</form>
 					</div>
-					<i href="#" class="topOfPage fa fa-chevron-up" onclick = document.documentElement.scrollIntoView();><a class="skip-link screen-reader-text" href="#content">Zum Start springen</a></i>
+					 <a href='#' class='scroll-to-top'><a class="skip-link screen-reader-text" href="#content">Zum Start springen</a></a>
 	<p></p></div>
 	</footer>
-
+		<script src="../js/menu-toggle.js"></script>
+		<script type="text/javascript" src="../js/lightbox.js"></script>
 
 </body>
 
