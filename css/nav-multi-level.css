@@ -1,0 +1,248 @@
+/*--------------------------------------------
+Navigation mit Dropdown - Heroimage mit Text
+---------------------------------------------*/
+
+
+/* Base styles für Navigation */
+
+.menu-section {
+	width: 100%;
+}
+
+.pagehead {
+	height: 180px;
+	width: 100%;
+	background-color: hsl(0, 0%, 25%);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.logo {
+	margin-top: 10px;
+	height: 160px;
+	background-image: url(../icons/logo_weiss.svg);
+	width: 160px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.menu ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	background: hsl(0, 0%, 20%);
+}
+
+.menu li a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding: 1em;
+}
+
+.menu li a:hover,
+.menu li a:focus {
+	background: hsl(0, 0%, 25%);
+}
+
+
+/* Hero-Image */
+
+.hero-image {
+	background-image: url(../images/mcdonald.jpg);
+	min-width: 100%;
+	height: 75vh;
+	width: auto;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 1;
+	background-position: 50% 50%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	background-attachment: fixed;
+}
+
+
+/* Field */
+
+.field {
+	height: 260px;
+	width: 440px;
+	background-color: rgba(0, 0, 0, 0.6);
+	margin-bottom: 80px;
+	margin-top: 100px;
+	margin-left: 8%;
+	border-top: 25px solid hsl(0, 0%, 20%);
+	padding: 0 40px;
+	padding-bottom: 60px;
+}
+
+.field p,
+.field h1 {
+	color: #fff;
+}
+
+.field:hover {
+	background-color: hsl(0, 0%, 20%);
+	cursor: pointer;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.field em {
+	display: none;
+}
+
+@media screen and (max-width: 30em) {
+	/* Ebene 2, Menüpunkte einrücken */
+	.multi-level-nav ul ul li a {
+		padding-left: 2em;
+	}
+	/* Button verstecken */
+	.dropdown-toggle {
+		display: none;
+	}
+	.menu-section {
+		background-color: hsl(0, 0%, 20%);
+		padding-bottom: 30px;
+	}
+	.menu-section.btn {
+		display: -webkit-box!important;
+		display: -ms-flexbox!important;
+		display: flex!important;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		margin: 0 auto!important;
+		padding-bottom: 10px!important;
+		width: 80px;
+		height: 30px!important;
+	}
+	.field {
+		width: 100%;
+		margin-left: 0;
+		height: 35%;
+		margin-top: 150px;
+		background-color: hsl(0, 0%, 20%);
+	}
+	.field p {
+		display: none;
+	}
+	.hero-image {
+		min-height: 50vh;
+	}
+	.field em {
+padding-top: 12px;
+		display: block;
+		font-size: 22px;
+		text-align: center;
+	}
+	.mobile-btn {
+		height: 50px;
+		width: 100%;
+		padding: 10px;
+		font-family: 'Roboto Slab', serif;
+		font-size: 14px;
+		line-height: 24px;
+		color: #fff;
+		background: #505050;
+		border: 0;
+	}
+}
+
+@media screen and (min-width: 30em) and (max-width: 786px) {
+	.multi-level-nav ul {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-ms-flex-pack: distribute!important;
+		justify-content: space-around!important;
+	}
+	.field {
+		width: 100%;
+		margin-left: 0;
+		height: 240px;
+		margin-top: 200px;
+	}
+}
+
+@media screen and (min-width: 30em) {
+	/* Liste Ebende 1 */
+	.multi-level-nav ul {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+	}
+	.menu li:nth-child(4) {
+		margin-right: 3em;
+	}
+	.multi-level-nav li {
+		position: relative;
+	}
+	li.has-childern > a {
+		padding-right: 0;
+	}
+	/* Ebene 2 ausblenden */
+	.multi-level-nav ul ul {
+		display: none;
+		position: absolute;
+		z-index: 100;
+	}
+	/* Liste Ebene 2 bekommt .toggled-on per JS */
+	.multi-level-nav ul .toggled-on {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+	/* Listenelemente in Ebene 2 */
+	.multi-level-nav ul ul li {
+		-webkit-box-flex: 1;
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+	}
+	/* Ebene 1, Button mit Untermenü */
+	.dropdown-toggle {
+		margin: 0;
+		padding: 0 .5em;
+		border: 0;
+		font-family: 'FontAwesome';
+		content: "";
+		text-transform: lowercase;
+		/* Stopt screen readers bei Kappitälchen */
+		background-color: transparent;
+		font-size: 18px;
+	}
+	/* Button mit Pfeil nach unten */
+	.dropdown-toggle:after {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 42px;
+		color: white;
+		content: "\f107";
+		line-height: 1em;
+	}
+	.dropdown-toggle:hover,
+	.dropdown-toggle:focus {
+		background: hsl(0, 0%, 25%);
+	}
+	/* Button mit Pfeil nach oben, .toggle-on wird per JS eingefügt */
+	.dropdown-toggle.toggle-on:after {
+		content: "\f106";
+	}
+}

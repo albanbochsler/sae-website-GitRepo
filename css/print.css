@@ -1,0 +1,51 @@
+/*--------------------------------------------
+Druckversion
+-----------------------------------------------*/
+
+@media print {
+	.pagehead,
+	.menu-section,
+	.field,
+	.hero-image,
+	.offer,
+	.footer-area,
+	.footer-section {
+		display: none;
+	}
+	.side {
+		display: block;
+		float: left;
+	}
+	p, a {
+		font-family: 'Helvetica', sans-serif;
+		font-size: 12px;
+		line-height: normal;
+	}
+	h1,
+	h2,
+	h3 {
+		font-size: 20px;
+		line-height: normal;
+	}
+	.btn {
+		display: none;
+	}
+	.cards img {
+		width: 60%!important;
+		height: 60%!important;
+		float: left;
+	}
+
+
+
+
+	.card {
+		display: block;
+
+	}
+
+	.breadcrumbs {
+		display: none;
+	}
+
+}

@@ -1,0 +1,101 @@
+/*-------------------------------------------------
+Typhography
+-------------------------------------------------*/
+
+p,
+a,
+i {
+	font-family: 'Libre Baskerville', serif;
+	font-size: 22px;
+	line-height: 30px;
+	text-decoration: none;
+	color: hsl(0, 0%, 10%);
+}
+
+h1 {
+	font-size: 43px;
+	line-height: 51px;
+	font-family: 'Helvetica', sans-serif;
+	font-weight: bold;
+	color: hsl(0, 0%, 10%);
+}
+
+h2 {
+	font-size: 35px;
+	line-height: 51px;
+	font-family: 'Helvetica', sans-serif;
+	font-weight: bold;
+	color: hsl(0, 0%, 10%);
+}
+
+h3 {
+	font-size: 27px;
+	line-height: 38px;
+	font-family: 'Helvetica', sans-serif;
+	font-weight: bold;
+	color: hsl(0, 0%, 10%);
+}
+
+b,
+strong {
+	font-weight: bold;
+	color: hsl(0, 0%, 10%);
+}
+
+span, label {
+	font-family: 'Helvetica', sans-serif;
+	font-size: 12px;
+	line-height: 30px;
+	text-decoration: none;
+	color: hsl(0, 0%, 60%);
+	padding-left: 5px;
+
+}
+
+a.input-a {
+	font-family: 'Helvetica', sans-serif;
+	font-size: 12px;
+	line-height: 30px;
+	text-decoration: none;
+	color: hsl(0, 0%, 60%);
+}
+
+a.input-a:hover {
+	text-decoration: underline;
+
+}
+/* _ */
+
+em,
+i {
+	font-style: italic;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+@media screen and (max-width: 30em) {
+	p, a {
+		font-size: 20px;
+	line-height: 28px;
+	}
+
+	h1 {
+	font-size: 39px;
+	line-height: 48px;
+
+}
+
+	h2 {
+	font-size: 30px;
+	line-height: 40px;
+
+}
+
+
+}

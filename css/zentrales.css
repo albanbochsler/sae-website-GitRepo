@@ -1,0 +1,20 @@
+/*-------------------------------------------------------
+Zentrales Stylesheet
+--------------------------------------------------------*/
+
+@import url('normalize.scss');
+@import url('accessibility.css');
+@import url('typhography.css');
+@import url(nav-multi-level.css);
+@import url(../js/menu-toggle.js);
+@import url('side.css');
+@import url('news.css');
+@import url('base-style.css');
+@import url('print.css');
+@import url("../js/application.js");
+@import url("offer.css");
+@import url("footer.css");
+@import url("work.css");
+@import url("table.css");
+@import url("contact.css");
+@import url("slideshow.css");

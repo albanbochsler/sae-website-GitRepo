@@ -1,0 +1,148 @@
+<html lang="de">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bochsler - Buildings CO</title>
+	<meta name="description" content="Dies ist die zu bewertende Website von Alban Bochsler">
+	<link rel="stylesheet" href="../css/zentrales.css" type="text/css" media="all">
+	<link rel="shortcut icon" type="image/x-icon" href="../icons/fav.ico">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300" rel="stylesheet">
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDQnrAQzneJc7RsZ2cUs33vMsyqHEMtlA"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+	<script src="../js/application.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbXaV8jpjgVZdsbICZ_sZNBjbfIuJ_lwM"></script>
+</head>
+
+<body> <a class="skip-link screen-reader-text" href="#content">Zum Inhalt springen</a>
+	<main class="main-area" id="content">
+		<div class="pagehead">
+			<div class="logo"> </div>
+		</div>
+		<section class="menu-section">
+			<nav id="multi-level-nav" class="multi-level-nav menu" role="navigation">
+				<ul>
+					<li><a href="../index.html">Startseite</a></li>
+					<li class="has-children"> <a href="arbeiten.html">Arbeiten<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Untermenü öffnen</span></button></a>
+						<ul class="sub-menu">
+							<li><a href="arbeiten.html">Metallbau</a></li>
+							<li><a href="arbeiten.html">Stahlbau</a></li>
+						</ul>
+					</li>
+					<li><a href="kontakt.html">Kontakt</a></li>
+					<li><a href="kontakt.html">Login</a></li>
+				</ul>
+			</nav>
+		</section>
+		<section class="contact">
+			<div class="address-block">
+				<div class="address-text">
+					<h2>Addresse</h2>
+					<div class="line"></div>
+					<br>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+					<br>
+					<h3>Kontakt</h3>
+					<p>Bochsler building co.
+						<br> Furkastrasse 2 | 8048 Zürich
+						<br> Telefon 076 680 62 60
+						<br> <a href="alban.bochsler@gmail.com">mail@bochsler-building.co</a></p>
+				</div>
+			</div>
+			<div class="contact-block">
+				<form class="flexbox-form" action="" data-validate novalidate>
+					<div class="form-title">
+						<h2>Anfrage</h2></div>
+						<label for=""><div class="error"></div>
+					<select name="title" data-validate-required data-validate-required-message="Bitte wählen Sie Ihr Geschlecht" required>
+						<option value="" disabled selected default>---</option>
+						<option value="Mr.">Herr</option>
+						<option value="Mrs.">Frau</option>
+					</select>
+					</label>
+
+					<input type="text" name="company" placeholder="Firma" autocomplete="cc-name">
+					<label for="">
+					<input type="text" name="firstname" required placeholder="Vorname" autocomplete="cc-name" data-validate-required data-validate-required-message="Bitte geben Sie Ihren Vornamen ein">
+					<div class="error"></div></label>
+					<label for="">
+					<input type="text" name="lastname" required placeholder="Nachname" autocomplete="cc-name" data-validate-required data-validate-required-message="Bitte geben Sie Ihren Nachnamen ein">
+					<div class="error"></div></label>
+					<label for="">
+					<input type="email" id='email' name="email" required placeholder="E-Mail" autocomplete="cc-name" data-validate-regexp="\S+@\S+" data-validate-regexp-message="Keine gültige E-Mail.">
+					<div class="error"></div></label>
+					<label for="">
+					<input type="text" name="phone" placeholder="Telefon" autocomplete="cc-name" data-validate-required data-validate-required-message="Bitte tragen Sie Ihre Telefonnummer ein">
+					<div class="error"></div></label>
+					<label for="">
+					<input type="text" name="fax" placeholder="Telefax" autocomplete="cc-name"> </label>
+					<label for="">
+					<input type="text" name="fax" placeholder="Mobiltelefon" autocomplete="cc-name"> </label>
+					<br>
+					<label class="counterstrike">
+					<div class="counter"> Sie haben noch <span id="counter"></span> Zeichen... </div>
+					<textarea name="mytext" id="mytext" data-validate-required data-validate-required-message="Bitte Text eingeben." autocapitalize="sentences" placeholder="Beschreibung - Bitte so detailliert wie möglich." maxlength="150" ></textarea>
+					<div class="error"></div>
+					</label>
+
+					<input type="radio" name="selection" value="metallbau">
+					<label for="mb">Metallbau</label>
+					<input type="radio" name="selection" value="stahlbau">
+					<label for="sb">Stahlbau</label>
+					<input type="radio" name="selection" value="other">
+					<label for="o">Andere</label>
+					<input type="text" name="client-nr" placeholder="Kundennummer" autocomplete="cc-name">
+					<input name="datei" type="file" size="50" accept="PDF/jpeg">
+					<input type="submit" name="submit" value="Senden">
+					<div class="leerraum" style="width: 200px;"></div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="newsletter" value="news" id="check1" checked>Newsletter abonieren</label>
+						<label>
+							<input type="checkbox" name="zutat" value="agb" id="check1" required><a class="input-a" href="#">AGB akzeptiert</a></label>
+						<div class="error"></div>
+					</div>
+				</form>
+			</div>
+			<div id="map"></div>
+		</section>
+		<footer class="footer-area">
+			<div class="footer-section address">
+				<h3>Kontakt</h3>
+				<p>Bochsler building co.
+					<br> Furkastrasse 2 | 8048 Zürich
+					<br> Telefon 076 680 62 60
+					<br> <a href="alban.bochsler@gmail.com">mail@bochsler-building.co</a></p>
+				<p>2017, copyright by Alban Bochsler
+					<br> <a href="#">Datenschutz</a> | <a href="#">Impressum</a></p>
+			</div>
+			<div class="footer-section">
+				<h3>Social</h3>
+				<nav id="social-menu" class="social-menu" role="navigation">
+					<ul>
+						<li><a href="https://twitter.com/"><span class="screen-reader-text">Twitter</span></a></li>
+						<li><a href="https://facebook.com/"><span class="screen-reader-text">Facebook</span></a></li>
+						<li><a href="https://linkedin.com/"><span class="screen-reader-text">LinkedIn</span></a></li>
+						<li><a href="https://youtube.com/"><span class="screen-reader-text">YouTube</span></a></li>
+						<li><a href="https://instagram.com/"><span class="screen-reader-text">Instagram</span></a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="footer-section">
+				<div class="newsletter">
+					<h3>Newsletter</h3>
+					<p>Wir setzen Massstäbe!
+						<br> Erfahren Sie mehr von unseren laufenden Projekten.</p>
+					<form id="nl2go--form" action="#" method="post" accept-charset="utf-8">
+						<input type="text" name="nl2go--mail" id="nl2go--mail" value="E-Mail Adresse"><a class="skip-link screen-reader-text" href="#content">Abonieren Sie unseren Newsletter, geben Sie hier Ihre Email-adresse ein.</a>
+						<input type="submit" value="OK" name="nl2go--submit" id="nl2go--submit">
+						<input type="hidden" name="nl2go--key" id="nl2go--key" value="c733d7970f33e812dc784163671541b88448df6e9cb97570e0a5dba2201afaf4$13156"> </form>
+				</div> <i href="#" class="topOfPage fa fa-chevron-up" onclick=d ocument.documentElement.scrollIntoView();><a class="skip-link screen-reader-text" href="#content">Zum Start springen</a></i>
+				<p></p>
+			</div>
+		</footer>
+</body>
+
+</html>

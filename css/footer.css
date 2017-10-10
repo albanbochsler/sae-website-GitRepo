@@ -1,0 +1,202 @@
+/*--------------------------------------
+Footer
+---------------------------------------*/
+
+.footer-area {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	height: auto;
+	background-color: hsl(0, 0%, 25%);
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.footer-section {
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 300px;
+	flex: 1 1 300px;
+}
+
+@media screen and (min-width: 1400px) {
+	.footer-section:first-child {
+		margin-left: 50px;
+	}
+	.footer-section:last-child {
+		margin-right: 50px;
+	}
+}
+
+
+/* Styles für Social Media Icons */
+
+.social-menu li a:before {
+	font-family: 'Fontawesome';
+	-webkit-font-smoothing: antialiased;
+	content: '\f08e';
+	/* Fallback */
+	color: hsl(0, 0%, 25%);
+}
+
+#social-menu li a {
+	font-size: 20px;
+}
+
+.social-menu li a[href*="twitter.com"]:before {
+	content: '\f099';
+}
+
+.social-menu li a[href*="facebook.com"]:before {
+	content: '\f09a';
+}
+
+.social-menu li a[href*="linkedin.com"]:before {
+	content: '\f0e1';
+}
+
+.social-menu li a[href*="youtube.com"]:before {
+	content: '\f167';
+}
+
+.social-menu li a[href*="instagram.com"]:before {
+	content: '\f16d';
+}
+
+#social-menu ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	width: 300px;
+	padding-left: 0;
+	list-style: none;
+}
+
+#social-menu ul li {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-right: 0!important;
+	border-radius: 50%;
+	text-align: center;
+	width: 40px;
+	height: 40px;
+	background-color: hsl(0, 0%, 39%);
+}
+
+#social-menu li:hover {
+	background-color: #fff;
+	cursor: pointer;
+	-webkit-transition: all 0.8s ease;
+	transition: all 0.8s ease;
+}
+
+
+/* footer typo & style */
+
+.footer-area h3 {
+	color: hsl(0, 0%, 100%);
+}
+
+.footer-section {
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 20px;
+}
+
+.footer-section p {
+	color: hsl(0, 0%, 80%);
+	font-weight: ;
+	font-family: 'Roboto Slab', serif;
+	letter-spacing: 0.5;
+}
+
+.footer-section a {
+	color: hsl(0, 0%, 80%);
+	font-weight: ;
+	font-family: 'Roboto Slab', serif;
+	letter-spacing: 0.5;
+}
+
+.address a:hover,
+.address a:active {
+	border-bottom: 3px solid #fff;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+
+/* Newsletter */
+
+input:hover,
+input:active,
+input:focus {
+	color: #fff;
+	background: #9d9d9d;
+	-webkit-transition: all 0.8s ease;
+	transition: all 0.8s ease;
+}
+
+input[type="text"] {
+	width: 200px;
+}
+
+input {
+	padding: 10px;
+	font-family: 'Roboto Slab', serif;
+	font-size: 14px;
+	line-height: 24px;
+	color: #9d9d9d;
+	background: #505050;
+	border: 0;
+}
+
+
+/* back to top */
+
+footer i:hover,
+footer a:active,
+footer a:focus {
+	color: #fff;
+	cursor: pointer;
+	-webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+i.topOfPage {
+	float: right;
+	display: block;
+	font-size: 45px;
+	line-height: 70px;
+	-webkit-transition: all 1.4s ease;
+	transition: all 1.4s ease;
+}
+
+.fa {
+	display: inline-block;
+	font-family: "FontAwesome";
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin-right: 10px;
+}
+
+footer i {
+	color: #9d9d9d;
+}
