@@ -19,12 +19,13 @@ News Section - Aktuelles
 	outline: none;
 }
 
-.more-btn a{
-font-size: 18px;
+.more-btn a, button {
+	font-size: 18px;
 	font-family: 'Lato', sans-serif;
 	letter-spacing: 2px;
 	font-weight: 500;
 	color: #fff;
+
 }
 
 .more-btn:hover{
@@ -32,6 +33,16 @@ font-size: 18px;
 }
 
 .more-btn:hover > a{
+	color: #59aecb;
+}
+
+.more-btn:hover > a{
+	color: #59aecb;
+}
+
+
+
+.btn-submit:hover {
 	color: #59aecb;
 }
 

@@ -69,10 +69,7 @@
 					</nav>
 				</div>
 
-		<section id="contact">
-	<div id="map"></div>
 
-		</section>
 
 		<footer class="footer-area">
 			<div class="footer-section address">
