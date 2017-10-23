@@ -74,25 +74,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = test_input($_POST["message"]);
   }
 
-    if ($name_error == '' and $email_error == '' and $phone_error == '' and $url_error == '' and $firstname_error == '' and $message_error == '' and $gender_error == '' and $agb_error == '')
-    {
-        $message_body = '';
-        unset($_POST['submit']);
-        foreach ($_POST as $key => $value) {
-            $message_body .= "$key: $value\n";
+  if ($name_error == '' and $email_error == '' and $phone_error == '' and $url_error == '' and $firstname_error == '' and $message_error == '' and $gender_error == '' and $agb_error == '')
+        {
+            $message_body = '';
+            unset($_POST['submit']);
+            foreach ($_POST as $key => $value) {
+                $message_body .= "$key: $value\n";
+            }
 
+        $to = 'alban.bochsler@gmail.com';
+        $subject = 'Anfrage über Kontaktformular';
+        if (mail($to, $subject, $message_body)){
+            $success = "Ihre Nachricht wurde übermittelt, Sie werden in kürze benachrichtigt!";
+            //reset form values
+            $name = $email = $phone = $message = $url = $firstname = '';
+            $gender = '';
+        }
 
-    $to = 'alban.bochsler@gmail.com';
-    $subject = 'Anfrage über Kontaktformular';
-    if (mail($to, $subject, $message_body)){
-        $success = "Ihre Nachricht wurde übermittelt, Sie werden in kürze benachrichtigt!";
-        //reset form values
-        $name = $email = $phone = $message = $url = $firstname = '';
-        $gender = '';
     }
-
-}
-}
 
 
 }
