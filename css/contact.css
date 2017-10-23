@@ -1,254 +1,108 @@
 /*--------------------------------------
-Kontakt
+Kontakt - php form validation
 ---------------------------------------*/
 
-.contact {
-	position: relative;
-	top: 100px;
+.container {
+	max-width:800px;
+	width:100%;
+	margin:0 auto;
+	position:relative;
+}
+
+
+
+#contact {
+	background:#F9F9F9;
+	padding:25px;
+	margin:50px 0;
+}
+
+#contact h3 {
+	color: #F96;
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+#contact h4 {
+	margin:5px 0 15px;
+	display:block;
+	font-size:13px;
+}
+
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
 	width: 100%;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
 }
 
-
-/* Addressblock */
-
-.address-block {
-	height: 800px;
-	width: auto;
-	-webkit-box-flex: 1;
-	-ms-flex: 1 1 auto;
-	flex: 1 1 auto;
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+	width:100%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:10px;
 }
 
-.address-text {
-	width: 300px;
-margin: 0 auto;
-	margin-top: 100px;
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid #AAA;
 }
 
-.address-text .line {
-	float: right;
+#contact textarea {
+	height:100px;
+	max-width:100%;
+  resize:none;
 }
 
-
-/* Kontaktformular */
-
-.contact-block {
-	background-color: hsl(0, 0%, 85%);
-	height: auto;
-	min-width: 400px;
-	-webkit-box-flex: 1;
-	-ms-flex: 1 1 auto;
-	flex: 1 1 auto;
+#contact button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background:#0CF;
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+	font-size:15px;
 }
 
-.flexbox-form {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	max-width: 500px;
-	margin: 80px auto;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	height: auto;
+#contact button[type="submit"]:hover {
+	background:#09C;
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
 }
 
-.form-title {
-	width: 500px;
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
 }
 
-.flexbox-form input:hover,
-.flexbox-form input:focus {
-	background-color: hsl(0, 0%, 95%);
-	color: hsl(0, 0%, 35%);
-}
-
-.flexbox-form input {
-	padding: 10px;
-	font-family: 'Helvetica', Arial, Sans-Serif;
-	font-size: 14px;
-	line-height: 24px;
-	background-color: hsl(0, 0%, 95%);
-	border: none;
-	margin: 5px;
-	border-top: 1px solid #C1C3D1;
-	color: #D5DDE5;
-	text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-	color: #666B85;
-	font-size: 16px;
-	font-weight: normal;
-}
-
-select[name="title"] {
-	padding: 10px;
-	font-family: 'Helvetica', Arial, Sans-Serif;
-	font-size: 14px;
-	line-height: 24px;
-	background: hsl(0, 0%, 95%);
-	border: none;
-	margin: 5px;
-	width: 80px;
-	border-top: 1px solid #C1C3D1;
-	color: #D5DDE5;
-	text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-	color: #666B85;
-	font-size: 16px;
-	font-weight: normal;
-	color: hsl(0, 0%, 65%);
-}
-
-input[name="firstname"] {
-	-webkit-box-flex: 1;
-	-ms-flex: 1 1 auto;
-	flex: 1 1 auto;
-}
-
-input[name="lastname"] {
-	-webkit-box-flex: 1;
-	-ms-flex: 1 1 auto;
-	flex: 1 1 auto;
-}
-
-input[name="company"] {
-	width: 130px;
-	margin-right: 100px;
-
-}
-
-input[name="email"] {
-	-webkit-box-flex: 1;
-	-ms-flex: 1 1 100%;
-	flex: 1 1 100%;
-}
-
-input[name="phone"] {
-	-webkit-box-flex: 1;
-	-ms-flex: 1 1 auto;
-	flex: 1 1 auto;
-}
-
-input[name="fax"] {
-	-webkit-box-flex: 1;
-	-ms-flex: 1 1 auto;
-	flex: 1 1 auto;
-}
-
-input[value="stahlbau"], input[value="other"]{
-	margin-left: 30px;
-	margin-top: 7px;
-}
-
-input[value="metallbau"]{
-	margin-top: 7px;
-}
-
-textarea[name="mytext"] {
-	padding: 10px;
-	font-family: 'Helvetica', Arial, Sans-Serif;
-	font-size: 14px;
-	line-height: 24px;
-	background: hsl(0, 0%, 95%);
-	border: none;
-	margin: 5px;
-	-webkit-box-flex: 1;
-	-ms-flex: 1 1 100%;
-	flex: 1 1 100%;
-	height: 150px;
-	width: 100%
-
-}
-
-.counterstrike {
-	display: block;
-	flex: 1 1 100%;
-}
-
-input[name="client-nr"] {
-	-webkit-box-flex: 1;
-	-ms-flex: 1 1 100%;
-	flex: 1 1 100%;
-}
-
-input[name="datei"] {
-	-webkit-box-flex: 1;
-	-ms-flex: 1 1 100%;
-	flex: 1 1 100%;
-	color: hsl(0, 0%, 63%);
-}
-
-input[name="submit"] {
-	-webkit-box-flex: 0;
-	-ms-flex: 0 1 30%;
-	flex: 0 1 30%;
-	color: hsl(0, 0%, 63%);
-}
-
-
-input[name="submit"]:hover,
-input[name="submit"]:focus {
-	background-color: hsl(0, 0%, 65%);
-	color: #fff;
-}
-
-input button {
-	border: none;
-}
-
-.checkbox {
-width: 200px;
-display: flex;
-flex-direction: column;
-	margin-top: 10px;
-}
-.counter {
-	display: block;
-}
 .error {
 	color: red;
-	display: block;
 }
 
-/* Karte */
-
-#map {
-	width: 100%;
-	height: 800px;
-}
-
-@media screen and (max-width: 30em) {
-	.flexbox-form {
-		margin: 15px;
-	}
-	.address-text {
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-		justify-content: center;
-	}
-	.address-text .line {
-		align-self: center;
-		float: none;
-	}
-
-
-}
-
-@media screen and (max-width: 898px) {
-	.contact-block {
-		padding-bottom: 20px;
-
-
-	}
-
-	.flexbox-form input[type="text"], .flexbox-form input[type="email"] {
-	width: 300px;
-}
+.success {
+	font-family: 'Helvetica';
+	font-size: 14px;
+	color: green;
+	text-align: center;
 }

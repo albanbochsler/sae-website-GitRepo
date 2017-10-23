@@ -1,3 +1,4 @@
+<?php include('../app/src/contact.php'); ?>
 <html lang="de">
 
 <head>
@@ -68,78 +69,11 @@
 					</nav>
 				</div>
 
-		<section class="contact">
-			<div class="address-block">
-				<div class="address-text">
-					<h2>Addresse</h2>
-					<div class="line"></div>
-					<br>
-					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-					<br>
-					<h3>Kontakt</h3>
-					<p>Bochsler building co.
-						<br> Furkastrasse 2 | 8048 Zürich
-						<br> Telefon 076 680 62 60
-						<br> <a href="alban.bochsler@gmail.com">mail@bochsler-building.co</a></p>
-				</div>
-			</div>
-			<div class="contact-block">
-				<form class="flexbox-form" action="" data-validate novalidate>
-					<div class="form-title">
-						<h2>Anfrage</h2></div>
-						<label for=""><div class="error"></div>
-					<select name="title" data-validate-required data-validate-required-message="Bitte wählen Sie Ihr Geschlecht" required>
-						<option value="" disabled selected default>---</option>
-						<option value="Mr.">Herr</option>
-						<option value="Mrs.">Frau</option>
-					</select>
-					</label>
+		<section id="contact">
+	<div id="map"></div>
 
-					<input type="text" name="company" placeholder="Firma" autocomplete="cc-name">
-					<label for="">
-					<input type="text" name="firstname" required placeholder="Vorname" autocomplete="cc-name" data-validate-required data-validate-required-message="Bitte geben Sie Ihren Vornamen ein">
-					<div class="error"></div></label>
-					<label for="">
-					<input type="text" name="lastname" required placeholder="Nachname" autocomplete="cc-name" data-validate-required data-validate-required-message="Bitte geben Sie Ihren Nachnamen ein">
-					<div class="error"></div></label>
-					<label for="">
-					<input type="email" id='email' name="email" required placeholder="E-Mail" autocomplete="cc-name" data-validate-regexp="\S+@\S+" data-validate-regexp-message="Keine gültige E-Mail.">
-					<div class="error"></div></label>
-					<label for="">
-					<input type="text" name="phone" placeholder="Telefon" autocomplete="cc-name" data-validate-required data-validate-required-message="Bitte tragen Sie Ihre Telefonnummer ein">
-					<div class="error"></div></label>
-					<label for="">
-					<input type="text" name="fax" placeholder="Telefax" autocomplete="cc-name"> </label>
-					<label for="">
-					<input type="text" name="fax" placeholder="Mobiltelefon" autocomplete="cc-name"> </label>
-					<br>
-					<label class="counterstrike">
-					<div class="counter"> Sie haben noch <span id="counter"></span> Zeichen... </div>
-					<textarea name="mytext" id="mytext" data-validate-required data-validate-required-message="Bitte Text eingeben." autocapitalize="sentences" placeholder="Beschreibung - Bitte so detailliert wie möglich." maxlength="150" ></textarea>
-					<div class="error"></div>
-					</label>
-
-					<input type="radio" name="selection" value="metallbau">
-					<label for="mb">Metallbau</label>
-					<input type="radio" name="selection" value="stahlbau">
-					<label for="sb">Stahlbau</label>
-					<input type="radio" name="selection" value="other">
-					<label for="o">Andere</label>
-					<input type="text" name="client-nr" placeholder="Kundennummer" autocomplete="cc-name">
-					<input name="datei" type="file" size="50" accept="PDF/jpeg">
-					<input type="submit" name="submit" value="Senden">
-					<div class="leerraum" style="width: 200px;"></div>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" name="newsletter" value="news" id="check1" checked>Newsletter abonieren</label>
-						<label>
-							<input type="checkbox" name="zutat" value="agb" id="check1" required><a class="input-a" href="#">AGB akzeptiert</a></label>
-						<div class="error"></div>
-					</div>
-				</form>
-			</div>
-			<div id="map"></div>
 		</section>
+
 		<footer class="footer-area">
 			<div class="footer-section address">
 				<h3>Kontakt</h3>
