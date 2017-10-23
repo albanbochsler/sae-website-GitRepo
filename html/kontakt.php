@@ -101,12 +101,12 @@
                 </fieldset>
 
                 <fieldset>
-                    <input placeholder="Your Email Address" name="email" type="text" value="<?= $email ?>" tabindex="3" >
+                    <input placeholder="Ihre E-Mail Adresse" name="email" type="text" value="<?= $email ?>" tabindex="3" >
                     <span class="error"><?= $email_error ?></span>
                 </fieldset>
 
                 <fieldset>
-                    <input placeholder="Your Phone Number" name="phone" type="text" value="<?= $phone ?>" tabindex="4" >
+                    <input placeholder="Ihre Handy-Nummer" name="phone" type="text" value="<?= $phone ?>" tabindex="4" >
                     <span class="error"><?= $phone_error ?></span>
                 </fieldset>
 
