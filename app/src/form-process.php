@@ -86,6 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $subject = 'Anfrage über Kontaktformular';
         if (mail($to, $subject, $message_body)){
             $success = "Ihre Nachricht wurde übermittelt, Sie werden in kürze benachrichtigt!";
+            $error = "Ihre Nachricht wurde nicht übermittelt, bitte füllen Sie die nötigen Felder aus.";
             //reset form values
             $name = $email = $phone = $message = $url = $firstname = '';
             $gender = '';

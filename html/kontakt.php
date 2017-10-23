@@ -131,6 +131,7 @@
                 </fieldset>
 
                 <div class="success"><?= $success ?></div>
+                <div class="success"><?= $error ?></div>
 
             </form>
         </div>
