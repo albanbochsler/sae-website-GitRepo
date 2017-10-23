@@ -1,4 +1,4 @@
-<?php include('../app/src/contact.php'); ?>
+<?php include('../app/src/form-process.php'); ?>
 <html lang="de">
 
 <head>
@@ -17,6 +17,7 @@
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDQnrAQzneJc7RsZ2cUs33vMsyqHEMtlA"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 	<script src="../js/application.js"></script>
+    <link href="../css/contact.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbXaV8jpjgVZdsbICZ_sZNBjbfIuJ_lwM"></script>
 
 </head>
@@ -69,6 +70,70 @@
 					</nav>
 				</div>
 
+
+
+
+
+
+        <div class="container">
+            <form id="contact" action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
+
+                <h3>Kontaktieren Sie uns</h3>
+                <br>
+
+
+
+                <select name="gender">
+                    <option value="" disabled selected default>---</option>
+                    <option value="Mr.">Herr</option>
+                    <option value="Mrs.">Frau</option>
+                </select>
+                <span class="error"><?= $gender_error ?></span>
+
+                <fieldset>
+                    <input placeholder="Ihr Vorname" name="firstname" type="text" value="<?= $firstname ?>" tabindex="1" autofocus>
+                    <span class="error"><?= $firstname_error ?></span>
+                </fieldset>
+
+                <fieldset>
+                    <input placeholder="Ihr Nachname" name="name" type="text" value="<?= $name ?>" tabindex="2" >
+                    <span class="error"><?= $name_error ?></span>
+                </fieldset>
+
+                <fieldset>
+                    <input placeholder="Your Email Address" name="email" type="text" value="<?= $email ?>" tabindex="3" >
+                    <span class="error"><?= $email_error ?></span>
+                </fieldset>
+
+                <fieldset>
+                    <input placeholder="Your Phone Number" name="phone" type="text" value="<?= $phone ?>" tabindex="4" >
+                    <span class="error"><?= $phone_error ?></span>
+                </fieldset>
+
+                <fieldset>
+                    <input placeholder="Ihre Webseite beginnt mit http://" type="text" name="url"  value="<?= $url ?>" tabindex="5">
+                    <span class="error"><?= $url_error ?></span>
+                </fieldset>
+
+                <fieldset>
+                    <textarea placeholder="Geben Sie Ihre Nachricht hier ein..." name="message"  tabindex="6" ></textarea>
+                    <span class="error"><?= $message_error ?></span>
+                </fieldset>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="newsletter" id="check1" checked>Newsletter abonieren</label>
+                    <label>
+                        <input type="checkbox" name="agb" id="check1"><a class="input-a" href="#">AGB akzeptiert</a></label>
+                    <span class="error"><?= $agb_error ?></span>
+                </div>
+                <fieldset>
+                    <button class="more-btn btn-submit" name="submit" type="submit" id="contact-submit" data-submit="...Senden" >Senden</button>
+                </fieldset>
+
+                <div class="success"><?= $success ?></div>
+
+            </form>
+        </div>
 
 
 		<footer class="footer-area">

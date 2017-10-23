@@ -1,8 +1,8 @@
 <?php
 
 // defining empty variables
-$name_error = $email_error = $phone_error = $url_error = $firstname_error = $message_error = "";
-$name = $email = $phone = $message = $url = $success = $firstname = "";
+$name_error = $email_error = $phone_error = $url_error = $firstname_error = $message_error = $gender_error =  $agb_error = "";
+$name = $email = $phone = $message = $url = $success = $firstname = $gender = $agb = "";
 
 // POST method
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -15,6 +15,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $name_error = "Nur Buchstaben und Leerzeichen sind erlaubt";
     }
   }
+
+    if (empty($_POST["gender"])) {
+        $gender_error = "Bitte wählen Sie Ihr Geschlecht aus";
+    } else {
+        $gender = test_input($_POST["gender"]);
+    }
+
+    if (empty($_POST["agb"])) {
+        $agb_error = "Bitte aktzeptieren Sie die AGB";
+    } else {
+        $agb = test_input($_POST["agb"]);
+    }
 
     if (empty($_POST["firstname"])) {
         $firstname_error = "Bitte geben Sie Ihren Vornamen ein";
@@ -62,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = test_input($_POST["message"]);
   }
 
-    if ($name_error == '' and $email_error == '' and $phone_error == '' and $url_error == '' and $firstname_error == '' and $message_error == '')
+    if ($name_error == '' and $email_error == '' and $phone_error == '' and $url_error == '' and $firstname_error == '' and $message_error == '' and $gender == '' and $agb == '')
     {
         $message_body = '';
         unset($_POST['submit']);
@@ -74,9 +86,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = 'alban.bochsler@gmail.com';
     $subject = 'Anfrage über Kontaktformular';
     if (mail($to, $subject, $message)){
-        $success = "Ihre Nachricht wurde übermittelt, Sie werden in kürz benachrichtigt!";
+        $success = "Ihre Nachricht wurde übermittelt, Sie werden in kürze benachrichtigt!";
         //reset form values
         $name = $email = $phone = $message = $url = $firstname = '';
+        $gender = '';
     }
 
 

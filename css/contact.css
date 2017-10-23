@@ -45,6 +45,10 @@ fieldset {
 	width: 100%;
 }
 
+select[name="gender"] {
+	height: 30px;
+	margin:  0 0 30px;
+}
 
 
 #contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
